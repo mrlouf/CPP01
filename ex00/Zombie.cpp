@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 13:16:55 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/11 15:00:24 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/11 15:01:52 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Zombie::Zombie(std::string str) : name(str) {
 	;
 }
 
-// Default Destructor
+// Default Destructor printing message for debug (ie. knowing the time of destruction)
 Zombie::~Zombie() {
 	std::cout << name << " has gone to Zombie's paradise" << std::endl;
 }
