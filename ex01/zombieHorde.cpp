@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 15:11:40 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/11 15:55:14 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/11 15:56:31 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ Zombie* zombieHorde(int N, std::string name) {
     for (int i = 0; i < N; ++i) {
         horde[i] = Zombie(name);
     }
+	
     return horde;
 }
