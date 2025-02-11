@@ -6,14 +6,25 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 13:16:28 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/11 13:39:32 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/11 14:58:44 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
+Zombie* newZombie( std::string name );
+void randomChump( std::string name );
+
 int	main()
 {
-	Zombie("Foo");
+	Zombie *Bar = newZombie("Bar");
+
+	Bar->announce();
+
+	randomChump("Foo");
+	
+	// Manual free of allocated pointer
+	delete Bar;
+	
 	return (0);
 }
