@@ -6,7 +6,14 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 13:16:28 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/11 13:16:29 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/11 13:39:32 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+int	main()
+{
+	Zombie("Foo");
+	return (0);
+}
