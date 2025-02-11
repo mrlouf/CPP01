@@ -5,7 +5,7 @@ NAME 		= MoarBrainz!
 # -=-=-=-=-    FLAG -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
 CC			= c++
-FLAGS		= -Werror -Wall -Wextra -std=c++98
+FLAGS		= -Werror -Wall -Wextra -std=c++98 -fsanitize=address
 
 # -=-=-=-=-    PATH -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
