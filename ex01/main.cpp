@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 15:11:22 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/11 15:43:51 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/12 15:18:25 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,15 @@ int	main(int ac, char **av)
     if (!(iss >> N))
     {
         std::cerr << "Invalid number: " << av[1] << std::endl;
-        return 1;
+        return (1);
     }
 	std::string name = av[2];
 
 	Zombie *horde = zombieHorde(N, name);
 
-	horde[1].announce();
+	for (int i = 0; i < N; i++) {
+		horde[i].announce();;
+	}
 
 	delete[] horde;
 
