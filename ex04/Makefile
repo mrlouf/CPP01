@@ -5,7 +5,7 @@ NAME 		= SedIsForLosers
 # -=-=-=-=-    FLAG -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
 CC			= c++
-FLAGS		= -Werror -Wall -Wextra -std=c++98 -fsanitize=address -fsanitize=leak
+FLAGS		= -Werror -Wall -Wextra -pedantic -std=c++98 -fsanitize=address -fsanitize=leak
 
 # -=-=-=-=-    PATH -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
@@ -33,7 +33,7 @@ clean:
 	@$(RM) $(OBJDIR)
 
 fclean: clean
-	@$(RM) $(NAME)
+	@$(RM) $(NAME) test.txt test.txt.replace
 
 re: fclean all
 
