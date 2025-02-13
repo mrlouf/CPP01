@@ -6,13 +6,18 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:23:08 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/12 17:28:19 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/13 16:31:09 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon( std::string str ) : _type(str) {}
+Weapon::Weapon( std::string str ) {
+	if (str.empty())
+		_type = "his mighty void puntero";
+	else
+		_type = str;
+}
 
 Weapon::~Weapon() {}
 
@@ -21,5 +26,7 @@ std::string Weapon::getType() {
 }
 
 void Weapon::setType( std::string weapon ) {
+	if (weapon.empty())
+		_type = "his mighty void puntero";
 	_type = weapon;
 }

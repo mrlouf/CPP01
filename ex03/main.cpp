@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:32:36 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/12 17:53:05 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/13 16:20:07 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,15 @@ int main()
 		bob.attack();
 	}
 	{
-		Weapon club = Weapon("crude spiked club");
+		std::string *null = NULL;
+		Weapon club = Weapon(*null);
 		HumanB jim("Jim");
-		jim.attack();
+		jim.attack(); // Attack before having a Weapon set
 		jim.setWeapon(club);
 		jim.attack();
 		club.setType("some other type of club");
+		jim.attack();
+		club.setType("");
 		jim.attack();
 	}
 	return 0;

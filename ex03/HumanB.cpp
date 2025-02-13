@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 16:17:40 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/12 17:50:46 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/13 16:23:29 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ HumanB::~HumanB() {}
 
 void	HumanB::setWeapon( Weapon &weapon ) {
 	_weapon = &weapon;
+}
+
+void setWeapon( Weapon &weapon ) {
+	(void)weapon;
+	std::cout << "bla bla" << std::endl;
 }
 
 void	HumanB::attack() {
