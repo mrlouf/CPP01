@@ -1,6 +1,6 @@
 # -=-=-=-=-    NAME -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
-NAME 		= SedIsForLosers
+NAME 		= Harl2.0
 
 # -=-=-=-=-    FLAG -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
@@ -13,7 +13,10 @@ RM			= rm -fr
 
 # -=-=-=-=-    FILES -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
-SRC 		= 	main.cpp
+SRC 		= 	main.cpp	\
+				Harl.cpp
+
+HEADER		=	Harl.hpp
 
 OBJDIR		= .obj
 OBJS		= $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
@@ -22,9 +25,9 @@ OBJS		= $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
 
 all: $(NAME)
 
-$(OBJDIR)/%.o: %.cpp Makefile
+$(OBJDIR)/%.o: %.cpp $(HEADER) Makefile
 	@mkdir -p $(@D)
-	@$(CC) $(FLAGS) -c $< -o $@
+	@$(CC) $(FLAGS) -I. -c $< -o $@
 
 $(NAME): $(OBJS)
 	@$(CC) $(FLAGS) $(SRC) -o $(NAME)
